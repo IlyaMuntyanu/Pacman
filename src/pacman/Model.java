@@ -17,6 +17,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -87,14 +89,13 @@ public class Model extends JPanel implements ActionListener {
         initGame();
     }
 
-
     private void loadImages() {
-        down = new ImageIcon("C:\\IdeaProjects\\Pacman\\src\\images\\down.gif").getImage();
-        up = new ImageIcon("C:\\IdeaProjects\\Pacman\\src\\images\\up.gif").getImage();
-        left = new ImageIcon("C:\\IdeaProjects\\Pacman\\src\\images\\left.gif").getImage();
-        right = new ImageIcon("C:\\IdeaProjects\\Pacman\\src\\images\\right.gif").getImage();
-        ghost = new ImageIcon("C:\\IdeaProjects\\Pacman\\src\\images\\ghost.gif").getImage();
-        heart = new ImageIcon("C:\\IdeaProjects\\Pacman\\src\\images\\heart.png").getImage();
+        down = new ImageIcon("src" + File.separator + "images" + File.separator +"down.gif").getImage();
+        up = (new ImageIcon("src" + File.separator + "images" + File.separator + "up.gif")).getImage();
+        left = new ImageIcon("src" + File.separator + "images" + File.separator +"left.gif").getImage();
+        right = new ImageIcon("src" + File.separator + "images" + File.separator +"right.gif").getImage();
+        ghost = new ImageIcon("src" + File.separator + "images" + File.separator +"ghost.gif").getImage();
+        heart = new ImageIcon("src" + File.separator + "images" + File.separator + "heart.png").getImage();
     }
     private void initVariables() {
 
